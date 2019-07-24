@@ -1,15 +1,26 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-
+import Vue from 'vue';
+import Router from 'vue-router';
+import HelloWorld from '@/components/HelloWorld';
+import IndexPage from '@/pages/index';
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+	mode: 'history',
+	routes: [
+		{
+			path: '/',
+			name: 'IndexPage',
+			component: IndexPage
+		},
+		{
+			path: '/a',
+			name: 'a',
+			component: HelloWorld,
+			/*childern: [{
+				path: ,	
+				name: ,
+				component: 
+			}]*/
+		}
+	]
 })
